@@ -1,0 +1,363 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: url("../img/star-wars.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
+
+/* fonts */
+:root {
+  /* colors */
+  --primary-100: #e2e0ff;
+  --primary-200: #c1beff;
+  --primary-300: #a29dff;
+  --primary-400: #837dff;
+  --primary-500: #645cff;
+  --primary-600: #504acc;
+  --primary-700: #3c3799;
+  --primary-800: #282566;
+  --primary-900: #141233;
+
+  /* grey */
+  --grey-50:  #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --red-intense: #ff0000;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  --green-light: #34bc48;
+  --green-alert: #008000;
+
+  /* fonts  */
+  --headingFont: "Roboto", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
+  --smallText: 0.7em;
+  --mediumText: 1rem;
+
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1420px;
+  --fixed-width: 600px;
+
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+/*=============== 
+Page
+===============
+*/
+
+.page {
+  width: auto;
+  margin-left: 10px;;
+  padding-top: 2rem;
+  min-height: calc(100vh - (6rem + 4rem));
+  display:grid;
+  text-align: center;
+  font-size: 1.2rem;
+
+}
+p{
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 5px;
+    padding:3px;
+    text-align: left;
+    border-radius: 0.5rem;
+    color: #e7e7da;
+    /* background: rgba(247, 15, 15, 0.4); */
+    
+}
+
+li {
+  list-style-type: none;
+  padding: 1rem;
+  color: hsl(55, 88%, 47%);
+  font-size: 1.5rem;
+}
+
+li:hover{
+  cursor: pointer;
+  color: hsl(53, 7%, 74%);
+  background: rgba(235, 86, 86, 0.4);
+  border-radius: 0.5rem;
+  width: fit-content;
+
+}
+a {
+  text-decoration: none;
+}
+button{
+  margin:10px;
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: beige;
+}
+ button:hover{
+  cursor: pointer;
+  background: rgba(87, 68, 172, 0.7);
+  color:beige;
+
+ }
+
+.datosIn {
+  -webkit-font-smoothing: antialiased;
+  background:rgba(242, 215, 214, 0.75);
+  align-items: center;
+  justify-content: center;
+  
+  color:  rgb(42, 31, 31);
+  width: fit-content;
+  padding: 25px;
+  border: double rgb(103, 71, 233) 3px;
+  margin: 15px;
+  display: inline-block;
+}
+.main{
+  display:inline-block;
+  margin-top: auto;
+
+}
+
+.valid{
+  color: green;
+  font-size: calc(10px + 1vmin);
+
+}
+
+.alert{
+  color: red;
+  font-size: calc(10px + 1vmin);
+  background: rgba(8, 8, 8, 0.4);
+}
+.alert:hover{
+  cursor:none;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+.page-footer{
+  width: 100vw;
+  max-width: 100%;
+  margin-bottom: 0px;
+  text-align: center;
+  height:5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--black);
+  color: var(--white);
+  margin-top: 20px;
+  margin: auto;
+}
+.page-footer p {
+    margin-bottom: 0;
+  }
+
+.page-footer .footer-logo,
+.page-footer a {
+ color: hsl(55, 88%, 47%);
+}
+
+span{
+  margin-right: 5px;
+}
+/*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+  height: 5rem;
+  display: grid;
+  background: rgba(19, 19, 19, 0.872);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  
+}
+.nav-center {
+  width: 100vw;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.nav-links {
+  display: flex;
+}
+
+#title-link{
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: hsl(55, 88%, 47%);
+  margin-right: 1rem;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+ 
+}
+nav a {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(55, 88%, 47%);
+  margin-right: 1rem;
+}
+nav a:hover {
+  color:  hsl(205, 37%, 15%);
+}
+/*
+=============== 
+Fin Navbar
+===============
+*/
+
+ .container{
+    text-align:left;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+ }
+
+.item1{
+  
+  display: inline-block;
+  width: auto;
+  background: rgba(19, 19, 19, 0.872);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.17 );
+  backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 10px;
+  width: 500px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.item2{
+  /* visibility:hidden; */
+  display: inline-block;
+  background: rgba(19, 19, 19, 0.872);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.17 );
+  backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 10px;
+  width:auto;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 50px;
+  color: hsl(55, 88%, 47%);
+}
+
+h2{
+  color: hsl(55, 88%, 47%);
+
+}
+
+
+.vehicle:hover{
+  cursor: pointer;
+  color: whitesmoke;
+  background: rgba(235, 86, 86, 0.4);
+}
+
+ .nave:hover{
+  cursor: pointer;
+  color: whitesmoke;
+  background: rgba(235, 86, 86, 0.4);
+ }
+
+ .actor:hover{
+  cursor: pointer;
+  color: whitesmoke;
+  background: rgba(235, 86, 86, 0.4);
+
+ }
+
+
+ /* ---------------------------
+Style the back to top button 
+-------------------------------*/
+.back-to-top {
+  position: fixed;
+  width: 8rem;
+  height: 10rem;
+  right: 1.5rem;
+  bottom: 3rem;
+  z-index: 9999;
+  border-radius: 25px;
+}
+.back-to-top:hover {
+  width: 10rem;
+  height: 12rem;
+  cursor: pointer;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
