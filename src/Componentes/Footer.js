@@ -26,7 +26,7 @@ function Footer() {
         <p>
           &copy; <span id="date">{year}</span>
           <span className="footer-logo">My sitio Web</span> Hecho con 💛
-          <a href="https://guileless-scone-3def61.netlify.app" target="_blank">
+          <a href="https://adp-profile.netlify.app" target="_blank">
             Alfredo Díez
           </a>
         </p>

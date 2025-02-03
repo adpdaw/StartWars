@@ -24,6 +24,7 @@ function ListaActores(props) {
                 </p>
               );
             }
+            return null;
           })
         ) : (
           <p className="alert">
